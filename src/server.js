@@ -5,7 +5,8 @@ const routes = require('./routes');
 
 
 mongoose.connect('mongodb+srv://tinder:tinder123@cluster0-7uu3i.mongodb.net/tinder?retryWrites=true&w=majority', {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 server.use(express.json());
 server.use(routes);
