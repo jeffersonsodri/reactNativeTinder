@@ -3,8 +3,7 @@ const Dev = require('../models/Dev');
 
 module.exports = {
     async  store(req, res) {
-        const {username} = req.body.username;
-        console.log(req.body.username);
+        const { username } = req.body;
 
         //Vendo de so usuário existe na base
         const userExists = await Dev.findOne({ user: username});
@@ -15,12 +14,12 @@ module.exports = {
         
         const response = await axios.get(`https://api.github.com/users/${username}`)
 
-        const {name, bio, avatar_url: avatar} =  response.data;
+        const { name, bio, avatar_url: avatar} =  response.data;
 
 
-        await dev = await Dev.create({
+        const dev = await Dev.create({
             name,
-            user : username,
+            user: username,
             bio,
             avatar
         });
@@ -30,3 +29,5 @@ module.exports = {
     }
 
 };
+
+// Index, Show, Store, Updated, Delete
