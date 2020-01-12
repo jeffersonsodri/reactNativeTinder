@@ -1,0 +1,12 @@
+h3 {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    box-shadow: 3px;
+    border: 1px solid rebeccapurple;
+    margin-top: 200px; 
+}
+
+body, input, button {
+    font-family: Arial, Helvetica, sans-serif;
+}
