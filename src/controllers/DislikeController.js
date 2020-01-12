@@ -10,7 +10,6 @@ module.exports = {
         const { user }  = req.headers;
         
         //buscar os models dos Ids no banco de dados
-        
         const loggedDev = await Dev.findById(user);
         const targetDev = await Dev.findById(devId);
         
@@ -18,16 +17,11 @@ module.exports = {
             return req.status(400).json({Erro: 'Dev no exists'});
         }
 
-        //Verifica se existe um like do usuário que ele está tentando dar like
-        if(targetDev.likes.includes(loggedDev._id) ){
-            console.log('Deu MAth');
-        }
-        else {
-            loggedDev.likes.push(targetDev._id);
+        loggedDev.dislikes.push(targetDev._id);
     
-            await loggedDev.save();
+        await loggedDev.save();
         
-        }
+        
         return res.json(loggedDev);
 
     }
