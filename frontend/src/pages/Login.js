@@ -9,7 +9,7 @@ export default function Login({history}) {
         e.preventDefault();
         console.log(username);
 
-        const response = await api.post('/devs', { username});
+        const response = await api.post('/devs', {username});
 
         console.log(response);
 
