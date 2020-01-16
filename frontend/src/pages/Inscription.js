@@ -5,17 +5,32 @@ import api from '../services/api'
 
 
 export default function Inscription({history}) {
+    const [username, setUsername] = useState('');
 
 
-    async function handleIncription({match}) {
+    async function handleIncription(e) {
+        e.preventDefault();
+        console.log(username);    
+        const response = await api.post('/devs', {username} );
+
         
+        const { _id } = response.data;
+
+        console.log(_id);
+
+
+       // history.push('/');
     }
 
     return (
         <div className="inscription-container">
-            <h1>Jefferson Entrou aqui</h1>
-            <form>
-                <input placeholder="Coloque seu usuário do GitHub"></input>
+            <h1>Adicionar conta GitHub</h1>
+            <form onSubmit={handleIncription}>
+            <input  
+                    placeholder="Adicione seu usuário do GitHub"
+                    value={username}
+                    onChange={e => setUsername(e.target.value)}
+                /> 
                 <button type="submit">Adicionar</button>
             </form>
         </div>

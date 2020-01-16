@@ -9,12 +9,8 @@ export default function Login({history}) {
     
     async function handleSubmit(e) {
         e.preventDefault();
-        console.log(username);
 
         const response = await api.post('/devs', {username});
-
-        console.log(response);
-
         const { _id } = response.data;
 
         history.push(`/dev/${_id}`);
@@ -31,11 +27,11 @@ export default function Login({history}) {
                 /> 
                 <button type="submit">Entrar</button>
 
-            </form>
-
+        </form>
         <Link to="/dev/inscription">
             <button type="button" >Inscreva-se</button>
         </Link>
+
         </div>
     );
 }
