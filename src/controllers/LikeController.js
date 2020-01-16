@@ -20,7 +20,7 @@ module.exports = {
 
         //Verifica se existe um like do usuário que ele está tentando dar like
         if(targetDev.likes.includes(loggedDev._id) ){
-            console.log('Deu MAth');
+            console.log('Deu Math');
         }
         else {
             loggedDev.likes.push(targetDev._id);

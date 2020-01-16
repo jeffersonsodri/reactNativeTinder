@@ -46,17 +46,16 @@ body, input, button {
     cursor: pointer;
     background-color: #DF4723;
     color: white;
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     font-size: 15px;
     font-weight: bold;
 }
 
-.login-container form button :hover{
+.login-container form button:hover{
     box-shadow: 2px;
     color: greenyellow;
 }
 
-.login-container form button :active{
-    color: blue;
+.login-container form button:active{
+   margin-top: 3px;
 
 }

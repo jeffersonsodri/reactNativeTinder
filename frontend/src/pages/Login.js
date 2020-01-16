@@ -28,6 +28,8 @@ export default function Login({history}) {
                     onChange={e => setUsername(e.target.value)}
                 /> 
                 <button type="submit">Entrar</button>
+                <button type="button">Inscreva-se</button>
+
             </form> 
         </div>
     );
