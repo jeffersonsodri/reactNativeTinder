@@ -16,6 +16,7 @@ body, input, button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .login-container form {
@@ -41,7 +42,7 @@ body, input, button {
 
 .login-container form button {
     margin-top: 5px;
-    border-radius: 2px;
+    border-radius: 4px;
     height: 38px;
     cursor: pointer;
     background-color: #DF4723;
@@ -58,4 +59,25 @@ body, input, button {
 .login-container form button:active{
    margin-top: 3px;
 
+}
+
+
+.login-container  button {
+    margin-top: 5px;
+    border-radius: 2px;
+    height: 38px;
+    cursor: pointer;
+    background-color: #DF4723;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-container  button:hover{
+    box-shadow: 2px;
+    color: greenyellow;
+}
+
+.login-container  button:active{
+   margin-top: 3px;
 }

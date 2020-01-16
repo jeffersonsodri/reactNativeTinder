@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../assets/css/Login.css';
 import api from '../services/api'; 
+import {Link} from 'react-router-dom'
+
 
 export default function Login({history}) {
     const [username, setUsername] = useState('');
@@ -28,9 +30,12 @@ export default function Login({history}) {
                     onChange={e => setUsername(e.target.value)}
                 /> 
                 <button type="submit">Entrar</button>
-                <button type="button">Inscreva-se</button>
 
-            </form> 
+            </form>
+
+        <Link to="/dev/inscription">
+            <button type="button" >Inscreva-se</button>
+        </Link>
         </div>
     );
 }
