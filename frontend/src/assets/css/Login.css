@@ -1,0 +1,83 @@
+.login-tinder {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 3px;
+    text-align: center;
+    font-size: 50px;
+}
+
+body, input, button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+.login-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-container form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form input {
+    margin-top: 20px;
+    border: 1px solid  #ddd;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: rgb(37, 35, 35)
+}
+
+.login-container form input :placeholder {
+    color: rgb(150, 145, 138)
+}
+
+.login-container form button {
+    margin-top: 5px;
+    border-radius: 4px;
+    height: 38px;
+    cursor: pointer;
+    background-color: #DF4723;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-container form button:hover{
+    box-shadow: 2px;
+    color: greenyellow;
+}
+
+.login-container form button:active{
+   margin-top: 3px;
+
+}
+
+
+.login-container  button {
+    margin-top: 5px;
+    border-radius: 2px;
+    height: 38px;
+    cursor: pointer;
+    background-color: #DF4723;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-container  button:hover{
+    box-shadow: 2px;
+    color: greenyellow;
+}
+
+.login-container  button:active{
+   margin-top: 3px;
+}

@@ -1,0 +1,101 @@
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    
+}
+
+.main-tinder {
+    width: 100%;
+    text-align: center;
+    color: rgb(226, 53, 53);   
+    font-size: 37px;
+}
+
+.main-container {
+    width: 980px;
+    margin: 0 auto; /* Centralizar na tela*/
+    text-align: center;
+    padding: 50px 0;
+
+}
+
+.main-container ul {  
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+.main-container ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-container ul li img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.main-container ul li footer {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 15px 20px;
+    text-align: left;
+    border-radius: 0 0 5px 5px;
+}
+
+.main-container ul li footer strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.main-container ul li footer p {
+    font-size: 15px;
+    line-height: 20px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.main-container ul li .buttons {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    
+}
+
+.main-container ul li .buttons  :hover{
+    background: rgb(80, 204, 91);
+   
+}
+
+.main-container ul li .buttons  :active{
+    background: coral;
+}
+
+.main-container ul li .buttons button {
+    height: 30px;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.main-container ul li .buttons button img {
+    height: 18px;
+    width: 100%;
+
+}
+
+.main-container .empty {
+    font-size: 30px;
+    color: #999;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
