@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../assets/css/Inscription.css';
-import api from '../services/api'
-
+import api from '../services/api';
 
 
 export default function Inscription({history}) {
@@ -17,9 +16,12 @@ export default function Inscription({history}) {
         const { _id } = response.data;
 
         console.log(_id);
-
-
-       // history.push('/');
+        if(_id !== ''){
+            alert('Adicionado com sucesso!');
+        } else{ 
+            alert('Não foi possível adicionar o: ' + username);
+        }
+        history.push('/');
     }
 
     return (

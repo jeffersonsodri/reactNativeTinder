@@ -15,6 +15,12 @@ export default function Login({history}) {
 
         history.push(`/dev/${_id}`);
     }
+
+    async function handleRegister(e){
+        e.preventDefault();
+
+        history.push(`/dev/inscription`);
+    }
     
     return (
         <div className="login-container">
@@ -28,10 +34,11 @@ export default function Login({history}) {
                 <button type="submit">Entrar</button>
 
         </form>
-        <Link to="/dev/inscription">
-            <button type="button" >Inscreva-se</button>
-        </Link>
-
+        <form onSubmit={handleRegister} >
+            <Link to="/dev/inscription">
+                <button type="button" >Inscreva-se</button>
+            </Link>
+        </form>
         </div>
     );
 }
